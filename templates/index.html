@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Поиск
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form action="result" method="post" style = "padding : 20px">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <label for="input_index" class="form-label">Текст</label>
+              <input type="text" name = "text" class="form-control" id="input_index" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="input_id" class="form-label">Источник</label>
+              <input type="text" name = "source" class="form-control" id="input_id">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary col-md-12">Поиск</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

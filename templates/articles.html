@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Результаты поиска
+
+{% endblock %}
+
+
+{% block body %}
+<div class="">
+<ul>
+{% for i in m %}
+
+<li>
+  <h2>{{ i['_source']['title'] }}</h2>
+  <p>{{ i['_source']['textBody'] }}</p>
+</li>
+
+{% endfor %}
+</ul>
+</div>
+{% endblock %}
